@@ -1,0 +1,120 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="setup">Setup</h1>
+<ol>
+<li><p>Link to <code>haiakel.min.css</code> in your HTML document <code>&lt;head&gt;</code> :</p>
+<pre><code class="lang-HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;haiakel.min.css&quot;&gt;
+</code></pre>
+<p>Now, you have <code>Haikal</code> in your Project.</p>
+</li>
+</ol>
+<h1 id="how-to-use-">How to use:</h1>
+<ul>
+<li><p>All classes in <code>Haiakel</code> start with <code>t</code> letter, (You can change it in <code>haiakel.scss</code> file):</p>
+<h4 id="example-">Example:</h4>
+<pre><code class="lang-HTML">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;t-small-12 t-medium-6 t-large-4&quot;&gt;
+    // Your Element 1
+  &lt;/div&gt;
+  &lt;div class=&quot;t-small-12 t-medium-6 t-large-4&quot;&gt;
+    // Your Element 2
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</li>
+<li><p>To use the grid, you shoud know that there are 3 different sizes in <code>Haiakel</code> :</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Device Tag</th>
+<th>Breakpoint</th>
+<th>Class (x = Column Size)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>small</td>
+<td>&lt; 576px</td>
+<td>t-small-x</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>&lt; 992px</td>
+<td>t-medium-x</td>
+</tr>
+<tr>
+<td>large</td>
+<td>&gt; 992px</td>
+<td>t-large-x</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>You can remove gutter (space between columns) by add <code>t-no-gutter</code> class to <code>column</code> or <code>container</code> or <code>container-fluid</code> or <code>row</code> :</p>
+<h4 id="example-">Example:</h4>
+<pre><code class="lang-HTML">// Remove gutter to all elements in t-container
+&lt;div class=&quot;container t-no-gutter&quot;&gt;
+  &lt;div class=&quot;t-small-12 t-medium-6 t-large-4&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+// Remove gutter to all elements in t-row
+&lt;div class=&quot;row t-no-gutter&quot;&gt;
+  &lt;div class=&quot;t-small-12 t-medium-6 t-large-4&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+// Remove gutter to special element
+&lt;div class=&quot;t-small-12 t-medium-6 t-large-4 t-no-gutter&quot;&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li>Or remove gutter to special device size (<code>t-small-no-gutter</code>, <code>t-medium-no-gutter</code>, <code>t-large-no-gutter</code>) :<h4 id="example-">Example:</h4>
+<pre><code class="lang-HTML">&lt;div class=&quot;t-small-12 t-small-no-gutter t-medium-6 t-large-4&quot;&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li><p>Offset &amp; pull &amp; push <code>t-x-offset-y</code>, <code>t-x-pull-y</code>, <code>t-x-push-y</code> (x = Device Tag, y = Column Size):</p>
+<h4 id="example-">Example:</h4>
+<pre><code class="lang-HTML">// Offset (Empty space before column)
+&lt;div class=&quot;t-large-4 t-large-offset-4&quot;&gt;&lt;/div&gt;
+
+// Pull (Pull column to the left without affecting on the other columns)
+&lt;div class=&quot;t-large-4 t-large-pull-4&quot;&gt;&lt;/div&gt;
+
+// Push (Push column to the right without affecting on the other columns)
+&lt;div class=&quot;t-large-4 t-large-push-4&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h1 id="customize-">Customize:</h1>
+</li>
+<li>You can customize <code>Haiakel</code> on <code>haiakel.scss</code> file.</li>
+<li><p>Change columns number &amp; gutter width:</p>
+<pre><code class="lang-SASS">$grid-columns: 12;
+$gutter-width: 30px;
+</code></pre>
+</li>
+<li><p>Change breakpoints:</p>
+<pre><code class="lang-SASS">$small-device-breakpoint: 576px;
+$medium-device-breakpoint: 992px;
+</code></pre>
+</li>
+<li><p>Change the class intro:</p>
+<pre><code class="lang-SASS">$class-intro: &quot;h&quot;;
+</code></pre>
+</li>
+<li><p>Change devices tag:</p>
+<pre><code class="lang-SASS">$small-device-tag: &quot;small&quot;;
+$medium-device-tag: &quot;medium&quot;;
+$large-device-tag: &quot;large&quot;;
+</code></pre>
+</li>
+<li><p>Change LTR to RTL:</p>
+<pre><code class="lang-SASS">$direction-rtl: false;
+</code></pre>
+</li>
+</ul>
+
+      </body>
+    </html>
