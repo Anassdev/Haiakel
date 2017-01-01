@@ -69,22 +69,27 @@
   $grid-columns: 12;
   $gutter-width: 30px;
   ```
+  
   * Change breakpoints:
   ``` SASS
   $small-device-breakpoint: 576px;
   $medium-device-breakpoint: 992px;
   ```
+  
   * Change the class intro:
   ``` SASS
   $class-intro: "h";
   ```
+  
   * Change devices tag:
   ``` SASS
   $small-device-tag: "small";
   $medium-device-tag: "medium";
   $large-device-tag: "large";
   ```
+  
   * Change LTR to RTL:
   ``` SASS
   $direction-rtl: false;
   ```
+  
