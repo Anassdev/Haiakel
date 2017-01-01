@@ -12,10 +12,10 @@
     #### Example:
     ``` HTML
     <div class="container">
-      <div class="h-small-12 t-medium-6 t-large-4">
+      <div class="h-small-12 h-medium-6 h-large-4">
         // Your Element 1
       </div>
-      <div class="h-small-12 t-medium-6 t-large-4">
+      <div class="h-small-12 h-medium-6 h-large-4">
         // Your Element 2
       </div>
     </div>
