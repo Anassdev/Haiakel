@@ -50,6 +50,11 @@ $column-width: (100% / $grid-columns);
   @include clearfix();
 }
 
+.container-fluid {
+  padding: ($gutter-width / 2);
+  width: 100%;
+}
+
 .row {
   margin-left: -($gutter-width / 2);
   margin-right: -($gutter-width / 2);
