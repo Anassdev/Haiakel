@@ -65,26 +65,26 @@
 # Customize:
   * You can customize `Haiakel` on `haiakel.scss` file.
   * Change columns number & gutter width:
-  ``` SCSS
+  ``` SASS
   $grid-columns: 12;
   $gutter-width: 30px;
   ```
   * Change breakpoints:
-  ``` SCSS
+  ``` SASS
   $small-device-breakpoint: 576px;
   $medium-device-breakpoint: 992px;
   ```
   * Change the class intro:
-  ``` SCSS
+  ``` SASS
   $class-intro: "h";
   ```
   * Change devices tag:
-  ``` SCSS
+  ``` SASS
   $small-device-tag: "small";
   $medium-device-tag: "medium";
   $large-device-tag: "large";
   ```
   * Change LTR to RTL:
-  ``` SCSS
+  ``` SASS
   $direction-rtl: false;
   ```
