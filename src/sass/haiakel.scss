@@ -1,0 +1,182 @@
+// Settings
+$grid-columns: 12;
+$gutter-width: 30px;
+
+$small-device-breakpoint: 576px;
+$medium-device-breakpoint: 992px;
+
+$class-intro: "h";
+
+$small-device-tag: "small";
+$medium-device-tag: "medium";
+$large-device-tag: "large";
+
+$direction-rtl: false;
+//  Settings End
+
+$column-width: (100% / $grid-columns);
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*="#{$class-intro}-"] {
+  @if $direction-rtl {
+    float: right;
+  } @else {
+    float: left;
+  }
+  width: 100%;
+  padding-left: ($gutter-width / 2);
+  padding-right: ($gutter-width / 2);
+  box-sizing: border-box;
+}
+
+[class*="#{$class-intro}-#{$small-device-tag}-pull"],
+[class*="#{$class-intro}-#{$medium-device-tag}-pull"],
+[class*="#{$class-intro}-#{$large-device-tag}-pull"],
+[class*="#{$class-intro}-#{$small-device-tag}-push"],
+[class*="#{$class-intro}-#{$medium-device-tag}-push"],
+[class*="#{$class-intro}-#{$large-device-tag}-push"] {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  @include clearfix();
+}
+
+.row {
+  margin-left: -($gutter-width / 2);
+  margin-right: -($gutter-width / 2);
+}
+
+@for $i from 1 through $grid-columns {
+  .#{$class-intro}-#{$small-device-tag}-#{$i} {
+    @if $direction-rtl {
+      float: right;
+    } @else {
+      float: left;
+    }
+    max-width: ($column-width * $i);
+  }
+  @media (max-width: $small-device-breakpoint) {
+    .#{$class-intro}-#{$small-device-tag}-offset-#{$i} {
+      @if $direction-rtl {
+        margin-right: ($column-width * $i);
+      } @else {
+        margin-left: ($column-width * $i);
+      }
+    }
+  }
+  .#{$class-intro}-#{$small-device-tag}-pull-#{$i} {
+    @if $direction-rtl {
+      left: ($column-width * $i);
+    } @else {
+      right: ($column-width * $i);
+    }
+  }
+  .#{$class-intro}-#{$small-device-tag}-push-#{$i} {
+    @if $direction-rtl {
+      right: ($column-width * $i);
+    } @else {
+      left: ($column-width * $i);
+    }
+  }
+}
+
+@media (max-width: $small-device-breakpoint) {
+  .#{$class-intro}-#{$small-device-tag}-no-gutter {
+    padding: 0;
+  }
+}
+
+@media (min-width: $small-device-breakpoint) {
+  .container {
+    max-width: $small-device-breakpoint;
+  }
+  @for $i from 1 through $grid-columns {
+    .#{$class-intro}-#{$medium-device-tag}-#{$i} {
+      @if $direction-rtl {
+        float: right;
+      } @else {
+        float: left;
+      }
+      max-width: ($column-width * $i);
+    }
+    .#{$class-intro}-#{$medium-device-tag}-offset-#{$i} {
+      @if $direction-rtl {
+        margin-right: ($column-width * $i);
+      } @else {
+        margin-left: ($column-width * $i);
+      }
+    }
+    .#{$class-intro}-#{$medium-device-tag}-pull-#{$i} {
+      @if $direction-rtl {
+        left: ($column-width * $i);
+      } @else {
+        right: ($column-width * $i);
+      }
+    }
+    .#{$class-intro}-#{$medium-device-tag}-push-#{$i} {
+      @if $direction-rtl {
+        right: ($column-width * $i);
+      } @else {
+        left: ($column-width * $i);
+      }
+    }
+  }
+  @media (max-width: $medium-device-breakpoint) {
+    .#{$class-intro}-#{$medium-device-tag}-no-gutter {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: $medium-device-breakpoint) {
+  .container {
+    max-width: $medium-device-breakpoint;
+  }
+  @for $i from 1 through $grid-columns {
+    .#{$class-intro}-#{$large-device-tag}-#{$i} {
+      @if $direction-rtl {
+        float: right;
+      } @else {
+        float: left;
+      }
+      max-width: ($column-width * $i);
+    }
+    .#{$class-intro}-#{$large-device-tag}-offset-#{$i} {
+      @if $direction-rtl {
+        margin-right: ($column-width * $i);
+      } @else {
+        margin-left: ($column-width * $i);
+      }
+    }
+    .#{$class-intro}-#{$large-device-tag}-pull-#{$i} {
+      @if $direction-rtl {
+        left: ($column-width * $i);
+      } @else {
+        right: ($column-width * $i);
+      }
+    }
+    .#{$class-intro}-#{$large-device-tag}-push-#{$i} {
+      @if $direction-rtl {
+        right: ($column-width * $i);
+      } @else {
+        left: ($column-width * $i);
+      }
+    }
+  }
+  .#{$class-intro}-#{$large-device-tag}-no-gutter {
+    padding: 0;
+  }
+}
+
+.#{$class-intro}-no-gutter {
+  padding: 0;
+}
