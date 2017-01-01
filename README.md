@@ -88,7 +88,7 @@
   $large-device-tag: "large";
   ```
   
-  * Change LTR to RTL:
+  * Change LTR to RTL (true = RTL):
   ``` SASS
   $direction-rtl: false;
   ```
