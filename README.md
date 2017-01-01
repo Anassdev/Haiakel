@@ -93,4 +93,3 @@
   ``` SASS
   $direction-rtl: false;
   ```
-  
