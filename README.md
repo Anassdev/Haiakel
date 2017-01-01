@@ -21,7 +21,7 @@
     </div>
     ```
 
-  * To use the grid, you shoud know that there are 3 different sizes in `Haiakel` :
+  * There are 3 different sizes in `Haiakel` :
 
 | Device Tag | Breakpoint | Class (x = Column Size) |
 | --- | --- | --- |
