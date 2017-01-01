@@ -46,10 +46,11 @@
     <div class="t-small-12 t-medium-6 t-large-4 t-no-gutter"></div>
     ```
   * Or remove gutter to special device size (`t-small-no-gutter`, `t-medium-no-gutter`, `t-large-no-gutter`) :
-  #### Example:
+    #### Example:
     ``` HTML
     <div class="t-small-12 t-small-no-gutter t-medium-6 t-large-4"></div>
     ```
+
   * Offset & pull & push `t-x-offset-y`, `t-x-pull-y`, `t-x-push-y` (x = Device Tag, y = Column Size):
   #### Example:
     ``` HTML
