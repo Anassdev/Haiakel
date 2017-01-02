@@ -47,11 +47,14 @@ $column-width: (100% / $grid-columns);
 
 .container {
   margin: 0 auto;
+  padding-left: ($gutter-width / 2);
+  padding-right: ($gutter-width / 2);
   @include clearfix();
 }
 
 .container-fluid {
-  padding: ($gutter-width / 2);
+  padding-left: ($gutter-width / 2);
+  padding-right: ($gutter-width / 2);
   width: 100%;
 }
 
@@ -102,7 +105,7 @@ $column-width: (100% / $grid-columns);
 
 @media (min-width: $small-device-breakpoint) {
   .container {
-    max-width: $small-device-breakpoint;
+    max-width: ($small-device-breakpoint - $gutter-width);
   }
   @for $i from 1 through $grid-columns {
     .#{$class-intro}-#{$medium-device-tag}-#{$i} {
@@ -144,7 +147,7 @@ $column-width: (100% / $grid-columns);
 
 @media (min-width: $medium-device-breakpoint) {
   .container {
-    max-width: $medium-device-breakpoint;
+    max-width: ($medium-device-breakpoint - $gutter-width);
   }
   @for $i from 1 through $grid-columns {
     .#{$class-intro}-#{$large-device-tag}-#{$i} {

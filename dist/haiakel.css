@@ -17,6 +17,8 @@
 
 .container {
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .container:after {
@@ -26,7 +28,8 @@
 }
 
 .container-fluid {
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
 }
 
@@ -271,7 +274,7 @@
 
 @media (min-width: 576px) {
   .container {
-    max-width: 576px;
+    max-width: 546px;
   }
   .h-medium-1 {
     float: left;
@@ -439,7 +442,7 @@
 
 @media (min-width: 992px) {
   .container {
-    max-width: 992px;
+    max-width: 962px;
   }
   .h-large-1 {
     float: left;
